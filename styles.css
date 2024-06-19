@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Serif:ital,opsz,wdth,wght,GRAD@0,8..144,50..150,100..900,-50..100;1,8..144,50..150,100..900,-50..100&display=swap');
+:root {
+  --color1: #769656;
+  --color2: #eeeed2;
+  --color3: #baca44;
+  --color4: #fff;
+  --color5: #111;
+  --color6: #a1662f;
+  --fontA: 'Roboto';
+  --fontB: 'Poppins';
+  --fontC: 'EB Garamond';
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+.chess,
+.chess-board .square {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.chess {
+  height: 100vh;
+}
+.chess-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+.title {
+  color: var(--color3);
+  font-family: var(--fontB);
+  font-size: 3rem;
+}
+.chess-board {
+  display: grid;
+  grid-template: repeat(8, 1fr) / repeat(8, 1fr);
+  min-width: 700px;
+  min-height: 700px;
+  border-radius: 0.5rem;
+}
+.chess-board .square {
+  background-color: var(--color1);
+  font-size: 4rem;
+}
+.chess-board .square.dark {
+  background-color: var(--color2);
+}
+.chess-board .square.black-side {
+  color: var(--color5);
+}
+.chess-board .square.white-side {
+  color: var(--color4);
+}
